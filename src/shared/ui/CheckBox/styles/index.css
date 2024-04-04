@@ -1,0 +1,41 @@
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #9e9e9e;
+  background-color: #fff;
+  border-radius: 25px;
+}
+
+.custom-checkbox input {
+  opacity: 0;
+  z-index: 10;
+  width: 20px;
+  border: 1px solid #9e9e9e;
+  height: 20px;
+  cursor: pointer;
+}
+.custom-checkbox::after {
+  content: "";
+  background-color: #1bb234;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  opacity: 0;
+  transition: opacity 0.15s ease-out, border-color 0.15s ease-out; /* Добавляем анимацию для изменения цвета границы */
+}
+
+.custom-checkbox input::after {
+  opacity: 1;
+  border: 1px solid #1bb234;
+}
+
+.checked::after {
+  opacity: 1;
+}

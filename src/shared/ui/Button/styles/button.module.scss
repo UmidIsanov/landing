@@ -1,0 +1,5 @@
+.button {
+  &:disabled {
+    background-color: var(--color-200) !important;
+  }
+}
